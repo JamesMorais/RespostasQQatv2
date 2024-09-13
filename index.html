@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #e2e0e0;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            height: 100%;
+        }
+
+        .box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            width: 700px;
+        }
+
+        input {
+            width: 200px;
+            margin: 10px 0 10px 0;
+        }
+
+        button {
+            margin-top: 10px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <h1>Respostas</h1>
+        <div class="box">
+            <p>Indique com um X quais dos dados  apresentados são do tipo <strong>Inteiro</strong></p>
+            <pre>
+                (X) 1000  
+                ( ) “)”  
+                ( ) “-900”  
+                ( ) .Verdadeiro.  
+                (X) -456  
+                (X) 34  
+                ( ) “Casa 8”  
+                (X) 0  
+                ( ) .Falso.  
+                ( ) -1.56  
+
+            </pre>
+        </div>
+        <div class="box">
+            <p>Indique com um X quais dos dados são do  tipo <strong>Real</strong>. </p>
+            <pre>
+                ( ) -678  
+                ( ) “0.87”  
+                ( ) “-9.12”  
+                ( ) .Verdadeiro.  
+                ( ) -456  
+                (X) -99.8  
+                ( ) “Cinco”  
+                (X) 45.8976  
+                ( ) .Falso.  
+                (X) -1.56 
+
+            </pre>
+        </div>
+        <div class="box">
+            <p>Indique com um X quais dos dados  seguintes são do tipo <strong>Literal</strong>.</p>
+            <pre>
+                ( ) 678  
+                (X) “0.87”  
+                (X) “-9.12”  
+                (X) “Verdadeiro”  
+                ( ) -456  
+                ( ) -99.8  
+                (X) “Cinco”  
+                ( ) 45.8976  
+                ( ) .Falso.  
+                ( ) 1.56 
+
+            </pre>
+        </div>
+        <div class="box">
+            <p>Indique com um X quais dos dados são do  tipo <strong>Lógico</strong>.</p>
+            <pre>
+            ( ) -678  
+            ( ) “0.87”  
+            ( ) “-9.12”  
+            (X) .Verdadeiro.  
+            ( ) -456  
+            (X) .V.  
+            ( ) “Cinco”.  
+            (X) . Falso.  
+            (X) .F.  
+            ( ) -1.56
+            
+            </pre>
+        </div>
+        <div class="box-image"><img src="" alt=""></div>
+
+        <div class="box">
+            <h3>6. Desenvolva os algoritmos, diagramas
+                de quadros e codificação em português
+                estruturado dos seguintes programas:</h3>
+        </div>
+        <div class="box">
+            <p><del>
+                    a. Ler uma temperatura em graus Celsius
+                    e apresentá-la convertida em graus
+                    Fahrenheit. A fórmula de conversão é F
+                    ← 9 * C + 160) / 5, sendo F a
+                    temperatura em Fahrenheit e C a
+                    temperatura em Celsius.
+                </del> Questão resolvida em aula
+            </p>
+            <p><del>
+                    b. Ler uma temperatura em graus
+                    Fahrenheit e apresentá-la convertida
+                    em graus Celsius. A fórmula de
+                    conversão é C ← (F -32)* (5/9), sendo
+                    F a temperatura em Fahrenheit e C a
+                    temperatura em Celsius.
+                </del> Questão resolvida em aula</p>
+        </div>
+
+        <!--DEVO RESPONDER A PARTIR DAQUI-->
+
+        <!--RESPONDER AS 4 PRIMEIRA PARTE-->
+        <div class="box">
+            <p>c. Calcular e apresentar o valor do volume
+                de uma lata de óleo, utilizando a
+                fórmula VOLUME ← 3.14159 * R ↑ 2 *
+                ALTURA.</p>
+            <label for="r">R:</label>
+            <input id="r" type="number" value="0" min="0">
+            <label for="altura">Altura:</label>
+            <input id="altura" type="number" value="0" min="0">
+            <button onclick="calcularValorVolume()">Enviar</button>
+            <p id="resultado1"></p>
+        </div>
+        <div class="box">
+            <p>d. Efetuar o cálculo da quantidade de
+                litros de combustível gasta em uma
+                viagem, utilizando um automóvel que
+                faz 12 km por litro. Para obter o cálculo,
+                o usuário deve fornecer o tempo gasto
+
+                e a velocidade média durante a viagem.
+                Desta forma, será possível obter a
+                distância percorrida com a fórmula
+                DISTÂNCIA ← TEMPO *
+                VELOCIDADE. Tendo o valor da
+                distância, basta calcular a quantidade
+                de litros de combustível utilizada na
+                viagem com a fórmula
+                LITROS_USADOS ← DISTÂNCIA / 12.
+                O programa deve apresentar os valores
+                da velocidade média, tempo gasto na
+                viagem, a distância percorrida e a
+                quantidade de litros utilizada na
+                viagem.</p>
+            <label for="tempo">Tempo:</label>
+            <input id="tempo" type="number" value="0" min="0">
+            <label for="velocidadeM">Velocidade Média:</label>
+            <input id="velocidadeM" type="number" value="0" min="0">
+            <button onclick="calcularQtdL()">Enviar</button>
+            <p id="resultado2"></p>
+        </div>
+        <div class="box">
+            <p>e. Efetuar o cálculo e a apresentação do
+                valor de uma prestação em atraso,
+                utilizando a fórmula PRESTAÇÃO ←
+                VALOR + (VALOR * (TAXA/100) *
+                TEMPO).</p>
+            <label for="valorInicial">Valor:</label>
+            <input id="valorInicial" type="number" value="0" min="0">
+            <label for="taxa">Taxa:</label>
+            <input id="taxa" type="number" value="0" min="0">
+            <label for="tempoD">Tempo em dias:</label>
+            <input id="tempoD" type="number">
+            <button onclick="calcularPrestacao()">Enviar</button>
+            <p id="resultado3"></p>
+        </div>
+        <div class="box">
+            <p>f. Ler dois valores para as variáveis A e
+                B, e efetuar a troca dos valores de
+                forma que a variável A passe a possuir
+                o valor da variável B e a variável B
+                passe a possuir o valor da variável A.
+                Apresentar os valores trocados.</p>
+            <label for="a">A:</label>
+            <input id="a" type="number" value="0" min="0">
+            <label for="b">B:</label>
+            <input id="b" type="number" value="0" min="0">
+            <button onclick="trocarValores()">Enviar</button>
+            <p id="resultado4"></p>
+        </div>
+
+        <!--RESPONDER AS 4 SEGUNDA PARTE-->
+
+        <div class="box">
+            <p>g. Ler quatro números e apresentar o
+                resultado da adição e multiplicação,
+                baseando-se na utilização da
+                propriedade distributiva. Ou seja, se
+                forem lidas as variáveis A, B, C e D,
+                devem ser somadas e multiplicadas A
+                com B, A com C e A com D. Depois B
+                com C, B com D e por fim C com D.</p>
+            <label for="valorA">A:</label>
+            <input id="valorA" type="number" value="0" min="0">
+            <label for="valorB">B:</label>
+            <input id="valorB" type="number" value="0" min="0">
+            <label for="valorC">C:</label>
+            <input id="valorC" type="number" value="0" min="0">
+            <label for="valorD">D:</label>
+            <input id="valorD" type="number" value="0" min="0">
+            <button onclick="aplicarPropDistributiva()">Enviar</button>
+            <p id="resultado5"></p>
+        </div>
+        <div class="box">
+            <p>h. Elaborar um programa que calcule e
+                apresente o volume de uma caixa
+                retangular por meio da fórmula:
+                VOLUME ← COMPRIMENTO *
+                LARGURA * ALTURA.</p>
+            <label for="comprimento">Comprimento:</label>
+            <input id="comprimento" type="number" value="0" min="0">
+            <label for="largura">Largura:</label>
+            <input id="largura" type="number" value="0" min="0">
+            <label for="h">Altura:</label>
+            <input id="h" type="number" value="0" min="0">
+            <button onclick="calcularVolumeCaixa()">Enviar</button>
+            <p id="resultado6"></p>
+        </div>
+        <div class="box">
+            <p>i. Efetuar a leitura de um número inteiro e
+                apresentar o resultado do quadrado
+                desse número.</p>
+            <label for="nmr">Número:</label>
+            <input id="nmr" type="number" value="0" min="0">
+            <button onclick="calcularQuadradoNmr()">Enviar</button>
+            <p id="resultado7"></p>
+        </div>
+        <div class="box">
+            <p>j. Ler dois inteiros (variáveis A e B) e
+                imprimir o resultado do quadrado da diferença do primeiro valor pelo
+                segundo.</p>
+            <label for="a1">A:</label>
+            <input id="a1" type="number" value="0" min="0">
+            <label for="b2">B:</label>
+            <input id="b2" type="number" value="0" min="0">
+            <button onclick="calcularQD()">Enviar</button>
+            <p id="resultado8"></p>
+        </div>
+
+        <!--RESPONDER AS 4 TERCEIRA PARTE-->
+
+        <div class="box">
+            <p>k. Elaborar um programa que efetue a
+                apresentação do valor da conversão
+                em real (R$) de um valor lido em dólar
+                (US$). O programa deve solicitar o
+                valor da cotação do dólar e também a
+                quantidade de dólares disponível com o
+                usuário.</p>
+            <label for="cotDolar1">Valor da cotação do Dollar:</label>
+            <input type="number" id="cotDolar1" value="0" min="0">
+            <label for="qtd1">Digite a quantidade:</label>
+            <input type="number" min="0" value="0" id="qtd1">
+            <button onclick="conversao(1)">Enviar</button>
+            <p id="resultado9"></p>
+
+
+        </div>
+        <div class="box">
+            <p>l. Elaborar um programa que efetue a
+                apresentação do valor da conversão
+                em dólar US$)de um valor lido em real
+                (R$). O programa deve solicitar o valor
+                da cotação do dólar e também a
+                quantidade de reais disponível com o
+                usuário.</p>
+            <label for="cotDolar2">Valor da cotação do Dollar:</label>
+            <input type="number" id="cotDolar2" value="0" min="0">
+            <label for="qtd2">Digite a quantidade:</label>
+            <input type="number" min="0" value="0" id="qtd2">
+            <button onclick="conversao(2)">Enviar</button>
+            <p id="resultado10"></p>
+        </div>
+        <div class="box">
+            <p>m. Elaborar um programa que efetue a
+                leitura de três valores (A, B e C) e
+                apresente como resultado final a soma
+                dos quadrados dos três valores lidos.</p>
+            <label for="vA1">A:</label>
+            <input id="vA1" type="number" value="0" min="0">
+            <label for="vB1">B:</label>
+            <input id="vB1" type="number" value="0" min="0">
+            <label for="vC1">C:</label>
+            <input id="vC1" type="number" value="0" min="0">
+            <button onclick="calcularSomaQT()">Enviar</button>
+            <p id="resultado11"></p>
+
+        </div>
+        <div class="box">
+            <p>n. Elaborar um programa que efetue a
+                leitura de três valores (A, B e C) e
+                apresente como resultado final o
+                quadrado da soma dos três valores
+                lidos.</p>
+            <label for="vA2">A:</label>
+            <input id="vA2" type="number" value="0" min="0">
+            <label for="vB2">B:</label>
+            <input id="vB2" type="number" value="0" min="0">
+            <label for="vC2">C:</label>
+            <input id="vC2" type="number" value="0" min="0">
+            <button onclick="calcularQuadradoSoma()">Enviar</button>
+            <p id="resultado12"></p>
+        </div>
+
+    </div>
+
+
+    <script src="meujs.js"></script>
+</body>
+
+</html>
