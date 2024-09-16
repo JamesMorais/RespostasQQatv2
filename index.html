@@ -42,6 +42,18 @@
             margin-top: 10px;
             width: 200px;
         }
+        @media screen and (max-width: 650px){
+            .flex-container{
+                align-items: center;
+            }
+            .box{
+                width: 80%;
+            
+            }
+            input, button{
+                width: 100%;
+            }
+        }
     </style>
 </head>
 
@@ -148,9 +160,9 @@
                 fórmula VOLUME ← 3.14159 * R ↑ 2 *
                 ALTURA.</p>
             <label for="r">R:</label>
-            <input id="r" type="number" value="0" min="0">
+            <input id="r" type="number" placeholder="Digite o valor..." min="0">
             <label for="altura">Altura:</label>
-            <input id="altura" type="number" value="0" min="0">
+            <input id="altura" type="number" placeholder="Digite o valor..."  min="0">
             <button onclick="calcularValorVolume()">Enviar</button>
             <p id="resultado1"></p>
         </div>
@@ -176,9 +188,9 @@
                 quantidade de litros utilizada na
                 viagem.</p>
             <label for="tempo">Tempo:</label>
-            <input id="tempo" type="number" value="0" min="0">
+            <input id="tempo" type="number" placeholder="Digite o valor..." min="0">
             <label for="velocidadeM">Velocidade Média:</label>
-            <input id="velocidadeM" type="number" value="0" min="0">
+            <input id="velocidadeM" type="number" placeholder="Digite o valor..." min="0">
             <button onclick="calcularQtdL()">Enviar</button>
             <p id="resultado2"></p>
         </div>
@@ -189,11 +201,11 @@
                 VALOR + (VALOR * (TAXA/100) *
                 TEMPO).</p>
             <label for="valorInicial">Valor:</label>
-            <input id="valorInicial" type="number" value="0" min="0">
+            <input id="valorInicial" type="number" placeholder="Digite o valor..." min="0">
             <label for="taxa">Taxa:</label>
-            <input id="taxa" type="number" value="0" min="0">
+            <input id="taxa" type="number" placeholder="Digite o valor..." min="0">
             <label for="tempoD">Tempo em dias:</label>
-            <input id="tempoD" type="number">
+            <input id="tempoD" type="number" placeholder="Digite o valor..." min="0">
             <button onclick="calcularPrestacao()">Enviar</button>
             <p id="resultado3"></p>
         </div>
@@ -205,9 +217,9 @@
                 passe a possuir o valor da variável A.
                 Apresentar os valores trocados.</p>
             <label for="a">A:</label>
-            <input id="a" type="number" value="0" min="0">
+            <input id="a" type="number" placeholder="Digite o valor..." min="0">
             <label for="b">B:</label>
-            <input id="b" type="number" value="0" min="0">
+            <input id="b" type="number" placeholder="Digite o valor..." min="0">
             <button onclick="trocarValores()">Enviar</button>
             <p id="resultado4"></p>
         </div>
@@ -224,13 +236,13 @@
                 com B, A com C e A com D. Depois B
                 com C, B com D e por fim C com D.</p>
             <label for="valorA">A:</label>
-            <input id="valorA" type="number" value="0" min="0">
+            <input id="valorA" type="number" placeholder="Digite o valor de A..." min="0">
             <label for="valorB">B:</label>
-            <input id="valorB" type="number" value="0" min="0">
+            <input id="valorB" type="number" placeholder="Digite o valor de B..." min="0">
             <label for="valorC">C:</label>
-            <input id="valorC" type="number" value="0" min="0">
+            <input id="valorC" type="number" placeholder="Digite o valor de C..." min="0">
             <label for="valorD">D:</label>
-            <input id="valorD" type="number" value="0" min="0">
+            <input id="valorD" type="number" placeholder="Digite o valor de D..." min="0">
             <button onclick="aplicarPropDistributiva()">Enviar</button>
             <p id="resultado5"></p>
         </div>
@@ -241,11 +253,11 @@
                 VOLUME ← COMPRIMENTO *
                 LARGURA * ALTURA.</p>
             <label for="comprimento">Comprimento:</label>
-            <input id="comprimento" type="number" value="0" min="0">
+            <input id="comprimento" type="number" placeholder="Digite o valor..." min="0">
             <label for="largura">Largura:</label>
-            <input id="largura" type="number" value="0" min="0">
+            <input id="largura" type="number" placeholder="Digite o valor..." min="0">
             <label for="h">Altura:</label>
-            <input id="h" type="number" value="0" min="0">
+            <input id="h" type="number" placeholder="Digite o valor..." min="0">
             <button onclick="calcularVolumeCaixa()">Enviar</button>
             <p id="resultado6"></p>
         </div>
@@ -254,7 +266,7 @@
                 apresentar o resultado do quadrado
                 desse número.</p>
             <label for="nmr">Número:</label>
-            <input id="nmr" type="number" value="0" min="0">
+            <input id="nmr" type="number" placeholder="Digite o valor..." min="0">
             <button onclick="calcularQuadradoNmr()">Enviar</button>
             <p id="resultado7"></p>
         </div>
@@ -263,9 +275,9 @@
                 imprimir o resultado do quadrado da diferença do primeiro valor pelo
                 segundo.</p>
             <label for="a1">A:</label>
-            <input id="a1" type="number" value="0" min="0">
+            <input id="a1" type="number" placeholder="Digite o valor..." min="0">
             <label for="b2">B:</label>
-            <input id="b2" type="number" value="0" min="0">
+            <input id="b2" type="number" placeholder="Digite o valor..." min="0">
             <button onclick="calcularQD()">Enviar</button>
             <p id="resultado8"></p>
         </div>
@@ -281,9 +293,9 @@
                 quantidade de dólares disponível com o
                 usuário.</p>
             <label for="cotDolar1">Valor da cotação do Dollar:</label>
-            <input type="number" id="cotDolar1" value="0" min="0">
+            <input type="number" id="cotDolar1" placeholder="Digite o valor..." min="0">
             <label for="qtd1">Digite a quantidade:</label>
-            <input type="number" min="0" value="0" id="qtd1">
+            <input type="number" min="0" placeholder="Digite o valor..." id="qtd1">
             <button onclick="conversao(1)">Enviar</button>
             <p id="resultado9"></p>
 
@@ -298,9 +310,9 @@
                 quantidade de reais disponível com o
                 usuário.</p>
             <label for="cotDolar2">Valor da cotação do Dollar:</label>
-            <input type="number" id="cotDolar2" value="0" min="0">
+            <input type="number" id="cotDolar2" placeholder="Digite o valor..." min="0">
             <label for="qtd2">Digite a quantidade:</label>
-            <input type="number" min="0" value="0" id="qtd2">
+            <input type="number" min="0" placeholder="Digite o valor..." id="qtd2">
             <button onclick="conversao(2)">Enviar</button>
             <p id="resultado10"></p>
         </div>
@@ -310,11 +322,11 @@
                 apresente como resultado final a soma
                 dos quadrados dos três valores lidos.</p>
             <label for="vA1">A:</label>
-            <input id="vA1" type="number" value="0" min="0">
+            <input id="vA1" type="number" placeholder="Digite o valor de A..." min="0">
             <label for="vB1">B:</label>
-            <input id="vB1" type="number" value="0" min="0">
+            <input id="vB1" type="number" placeholder="Digite o valor de B..." min="0">
             <label for="vC1">C:</label>
-            <input id="vC1" type="number" value="0" min="0">
+            <input id="vC1" type="number" placeholder="Digite o valor de C..." min="0">
             <button onclick="calcularSomaQT()">Enviar</button>
             <p id="resultado11"></p>
 
@@ -326,11 +338,11 @@
                 quadrado da soma dos três valores
                 lidos.</p>
             <label for="vA2">A:</label>
-            <input id="vA2" type="number" value="0" min="0">
+            <input id="vA2" type="number" placeholder="Digite o valor de A..." min="0">
             <label for="vB2">B:</label>
-            <input id="vB2" type="number" value="0" min="0">
+            <input id="vB2" type="number" placeholder="Digite o valor B..." min="0">
             <label for="vC2">C:</label>
-            <input id="vC2" type="number" value="0" min="0">
+            <input id="vC2" type="number" placeholder="Digite o valor de C..." min="0">
             <button onclick="calcularQuadradoSoma()">Enviar</button>
             <p id="resultado12"></p>
         </div>
